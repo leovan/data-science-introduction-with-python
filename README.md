@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](LICENSE)
 ![Issues](https://img.shields.io/github/issues/leovan/data-science-introduction-with-python.svg)
+[![Netlify Status](https://img.shields.io/netlify/c0fceb65-8d49-4a23-9bec-8942a16e3648)](https://app.netlify.com/sites/ds-python/deploys)
 
 ---
 
