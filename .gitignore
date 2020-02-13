@@ -1,0 +1,23 @@
+# R
+.Rhistory
+.Rproj.user
+.RData
+
+# vscode
+.vscode
+
+# system
+.DS_Store
+*.log
+*.dump
+
+# slides source
+*_files
+/*/slides/*
+!/*/slides/*.Rmd
+!/*/slides/images/
+
+# others
+*.tex
+*.aux
+*.xdv

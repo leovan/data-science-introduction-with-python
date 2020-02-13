@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Python 数据科学导论 | Data Science Introduction with Python</title>
+    <meta property="og:title" content="Python 数据科学导论 | Data Science Introduction with Python">
+    <meta property="og:type" content="website">
+    <meta property="description" content="Python 数据科学导论 | Data Science Introduction with Python">
+
+    <link rel="apple-touch-icon" size="192x192" href="/docs/images/web/icon-192x192.png">
+
+    <script type="application/ld+json">
+      { 
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          "name": "Python 数据科学导论 | Data Science Introduction with Python",
+          "description": "Python 数据科学导论 | Data Science Introduction with Python",
+          "author": {
+              "@type": "Person",
+              "name": "范叶亮"
+          },
+          "url": "https://ds-python.leovan.tech/"
+      }
+    </script>
+    
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/4.5.95/css/materialdesignicons.min.css">
+    
+    <style type="text/css">
+    html {
+      font-size: 100%;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      box-sizing: border-box;
+    }
+    
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    
+    body {
+      margin: 0 auto;
+      padding: 30px;
+      line-height: 2;
+      max-width: 1000px;
+      font-family: "Linux Libertine", Baskerville, Georgia, "Liberation Serif", "Noto Serif CJK SC", "Noto Serif CJK TC", "Source Han Serif SC", "Source Han Serif CN", "Source Han Serif TC", "Source Han Serif TW", "Source Han Serif", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+    }
+    
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid;
+      margin: 20px auto;
+      padding: 0;
+      max-width: 960px;
+    }
+    
+    a {
+      color: black;
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid;
+    }
+    
+    a:hover {
+      border-bottom: none;
+    }
+
+    .header-logo {
+      float: right;
+    }
+
+    .header-logo img {
+      border: none;
+      height: 100px;
+    }
+
+    .header-title {
+      font-size: 1.6em;
+      line-height: 36px;
+      font-weight: bold;
+    }
+
+    .header-content p {
+      line-height: 1em;
+    }
+
+    .header-content-icon, .content-block-icon {
+      margin-right: 0.2em;
+    }
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .content-block {
+      width: 48%;
+      margin-bottom: 20px;
+    }
+
+    .content-block-slide img {
+      height: 210px;
+      float: left;
+    }
+
+    .content-block-slide-contents {
+      height: 210px; 
+      font-size: 0.68em;
+      overflow-y: auto;
+    }
+
+    .content-block-slide-contents ol {
+      margin: 0;
+      padding: 0 0 0 1.6em;
+    }
+
+    .content-block-slide-contents ol > ul {
+      padding: 0 0 0 1em;
+    }
+
+    .content-block-slide-contents ol > li, .content-block-slide-contents ol > ul > li {
+      line-height: 1.6em;
+    }
+
+    .content-block-introduction {
+      margin-top: 10px;
+      line-height: 1.6em;
+    }
+
+    .content-block-title {
+      float: left;
+    }
+
+    .content-block-icons {
+      float: right
+    }
+
+    .footer {
+      text-align: center;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .content-block {
+        width: 100%;
+      }
+
+      .content-block img {
+        margin-left: auto;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .header-logo {
+        display: none;
+      }
+
+      .content-block-slide img {
+        float: none;
+      }
+
+      .content-block-slide-contents {
+        display: none;
+      }
+    }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="header-logo">
+        <img src="docs/images/web/data-science-introduction-with-python.png" />
+      </div>
+      <div class="header-title">
+        <div class="header-title-zh">Python 数据科学导论</div>
+        <div class="header-title-en">Data Science Introduction with Python</div>
+        <div class="header-title-badges">
+          <img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg" />
+          <img src="https://img.shields.io/github/issues/leovan/data-science-introduction-with-python.svg" />
+          <img src="https://img.shields.io/github/stars/leovan/data-science-introduction-with-python?style=social" />
+        </div>
+      </div>
+      <div class="header-content">
+        <p class="header-content-author"><span class="mdi mdi-account header-content-icon"></span>作者：<a href="https://leovan.me" target="_blank">范叶亮 | Leo Van</a></p>
+        <p class="header-content-repository"><span class="mdi mdi-github-circle header-content-icon"></span>仓库：<a href="https://github.com/leovan/data-science-introduction-with-python" target="_blank">leovan/data-science-introduction-with-python</a></p>
+        <p class="header-content-introduction"><span class="mdi mdi-book-open header-content-icon"></span>简介：本项目是一套以 Python 为分析语言的数据科学入门教程。</p>
+      </div>
+    </div>
+    <hr>
+    <div class="content">
+      <div class="content-block">
+        <div class="content-block-slide">
+          <img src="docs/images/slides/data-science-introduction.png" />
+          <div class="content-block-slide-contents">
+            <ol>
+              <li>数据科学概念</li>
+              <ul>
+                <li>数据科学</li>
+                <li>数据产品</li>
+                <li>跨界</li>
+              </ul>
+              <li>数据科学工具箱</li>
+              <ul>
+                <li>数据科学常用工具</li>
+                <li>数据科学之战</li>
+                <li>选择那种语言</li>
+              </ul>
+              <li>数据科学分工与流程</li>
+              <ul>
+                <li>数据科学分工</li>
+                <li>数据分析和挖掘流程</li>
+              </ul>
+            </ol>
+          </div>
+        </div>
+        <div class="content-block-introduction">
+          <div class="content-block-title">
+            <div class="content-block-title-zh">1. 数据科学简介</div>
+            <div class="content-block-title-en">1. Introduction of Data Science</div>
+          </div>
+          <div class="content-block-icons">
+            <div class="content-block-icons-slide"><span class="mdi mdi-projector-screen content-block-icon"></span><a class="event" event-action="slide" event-label="data-science-introduction" href="data-science-introduction/data-science-introduction.pdf" target="_blank">幻灯片</a></div>
+            <div class="content-block-icons-notebook"><span class="mdi mdi-note-text mdi-dark mdi-inactive content-block-icon"></span><a href="#"><del>Notebook</del></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="content-block-slide">
+          <img src="docs/images/slides/python-language-introduction.png" />
+          <div class="content-block-slide-contents">
+            <ol>
+              <li>Python 相关环境配置</li>
+              <li>Python 基础语法</li>
+              <li>Python 数据结构</li>
+              <li>Python 编码风格规范</li>
+            </ol>
+          </div>
+        </div>
+        <div class="content-block-introduction">
+          <div class="content-block-title">
+            <div class="content-block-title-zh">2. Python 语言简介</div>
+            <div class="content-block-title-en">2. Python Language Introduction</div>
+          </div>
+          <div class="content-block-icons">
+            <div class="content-block-icons-slide"><span class="mdi mdi-projector-screen content-block-icon"></span><a class="event" event-action="slide" event-label="python-language-introduction" href="python-language-introduction/python-language-introduction.pdf" target="_blank">幻灯片</a></div>
+            <div class="content-block-icons-notebook"><span class="mdi mdi-note-text mdi-dark mdi-inactive content-block-icon"></span><a href="#"><del>Notebook</del></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="content-block-slide">
+          <img src="docs/images/slides/data-analytics-introduction-part-1.png" />
+          <div class="content-block-slide-contents">
+            <ol>
+              <li>NumPy 简介</li>
+              <li>NumPy 多维数组对象</li>
+              <li>NumPy 面向数据编程</li>
+            </ol>
+          </div>
+        </div>
+        <div class="content-block-introduction">
+          <div class="content-block-title">
+            <div class="content-block-title-zh">3. 数据分析基础 (上)</div>
+            <div class="content-block-title-en">3. Data Analytics Introduction - Part 1</div>
+          </div>
+          <div class="content-block-icons">
+            <div class="content-block-icons-slide"><span class="mdi mdi-projector-screen content-block-icon"></span><a class="event" event-action="slide" event-label="data-analytics-introduction-part-1" href="data-analytics-introduction-part-1/data-analytics-introduction-part-1.pdf" target="_blank">幻灯片</a></div>
+            <div class="content-block-icons-notebook"><span class="mdi mdi-note-text content-block-icon"></span><a class="event" event-action="notebook" event-label="data-analytics-introduction-part-1" href="data-analytics-introduction-part-1/notebooks/data-analytics-introduction-part-1.ipynb">Notebook</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="content-block-slide">
+          <img src="docs/images/slides/data-analytics-introduction-part-2.png" />
+          <div class="content-block-slide-contents">
+            <ol>
+              <li>pandas 简介</li>
+              <li>pandas 数据载入和存储</li>
+              <li>pandas 数据规整</li>
+            </ol>
+          </div>
+        </div>
+        <div class="content-block-introduction">
+          <div class="content-block-title">
+            <div class="content-block-title-zh">4. 数据分析基础 (下)</div>
+            <div class="content-block-title-en">4. Data Analytics Introduction - Part 2</div>
+          </div>
+          <div class="content-block-icons">
+            <div class="content-block-icons-slide"><span class="mdi mdi-projector-screen content-block-icon"></span><a class="event" event-action="slide" event-label="data-analytics-introduction-part-2" href="data-analytics-introduction-part-2/data-analytics-introduction-part-2.pdf" target="_blank">幻灯片</a></div>
+            <div class="content-block-icons-notebook"><span class="mdi mdi-note-text content-block-icon"></span><a class="event" event-action="notebook" event-label="data-analytics-introduction-part-2" href="data-analytics-introduction-part-2/notebooks/data-analytics-introduction-part-2.ipynb">Notebook</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="content-block-slide">
+          <img src="docs/images/slides/data-visualization.png" />
+          <div class="content-block-slide-contents">
+            <ol>
+              <li>数据可视化</li>
+              <li>Matplotlib & Seaborn</li>
+              <li>plotnine</li>
+              <li>基于 Web 的绘图库</li>
+            </ol>
+          </div>
+        </div>
+        <div class="content-block-introduction">
+          <div class="content-block-title">
+            <div class="content-block-title-zh">5. 数据可视化</div>
+            <div class="content-block-title-en">5. Data Visualization</div>
+          </div>
+          <div class="content-block-icons">
+            <div class="content-block-icons-slide"><span class="mdi mdi-projector-screen content-block-icon"></span><a class="event" event-action="slide" event-label="data-visualization" href="data-visualization/data-visualization.pdf" target="_blank">幻灯片</a></div>
+            <div class="content-block-icons-notebook"><span class="mdi mdi-note-text content-block-icon"></span><a class="event" event-action="notebook" event-label="data-visualization" href="data-visualization/notebooks/data-visualization.ipynb">Notebook</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="content-block-slide">
+          <img src="docs/images/slides/statistical-analytics-introduction.png" />
+          <div class="content-block-slide-contents">
+            <ol>
+              <li>探索性分析</li>
+              <ul>
+                <li>描述性统计量</li>
+                <li>常用分布</li>
+              </ul>
+              <li>实验设计</li>
+              <ul>
+                <li>假设检验概念</li>
+                <li>常用假设检验</li>
+              </ul>
+              <li>线性回归</li>
+              <ul>
+                <li>一元线性回归</li>
+                <li>多元线性回归</li>
+                <li>广义线性回归</li>
+                <li>最小二乘法与梯度下降</li>
+              </ul>
+            </ol>
+          </div>
+        </div>
+        <div class="content-block-introduction">
+          <div class="content-block-title">
+            <div class="content-block-title-zh">6. 统计分析基础</div>
+            <div class="content-block-title-en">6. Statistical Analytics Introduction</div>
+          </div>
+          <div class="content-block-icons">
+            <div class="content-block-icons-slide"><span class="mdi mdi-projector-screen content-block-icon"></span><a class="event" event-action="slide" event-label="statistical-analytics-introduction" href="statistical-analytics-introduction/statistical-analytics-introduction.pdf" target="_blank">幻灯片</a></div>
+            <div class="content-block-icons-notebook"><span class="mdi mdi-note-text content-block-icon"></span><a class="event" event-action="notebook" event-label="statistical-analytics-introduction" href="statistical-analytics-introduction/notebooks/statistical-analytics-introduction.ipynb">Notebook</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="content-block-slide">
+          <img src="docs/images/slides/feature-engineering.png" />
+          <div class="content-block-slide-contents">
+            <ol>
+              <li>数据预处理</li>
+              <ul>
+                <li>数据清洗</li>
+                <li>缺失值，重复值，异常值处理</li>
+                <li>数据采样，数据集分割</li>
+              </ul>
+              <li>特征变换和编码</li>
+              <ul>
+                <li>无量纲化</li>
+                <li>分箱</li>
+                <li>分类特征编码</li>
+              </ul>
+              <li>特征提取，选择和监控</li>
+              <ul>
+                <li>特征提取</li>
+                <li>特征选择</li>
+                <li>特征监控</li>
+              </ul>
+            </ol>
+          </div>
+        </div>
+        <div class="content-block-introduction">
+          <div class="content-block-title">
+            <div class="content-block-title-zh">7. 特征工程</div>
+            <div class="content-block-title-en">7. Feature Engineering</div>
+          </div>
+          <div class="content-block-icons">
+            <div class="content-block-icons-slide"><span class="mdi mdi-projector-screen content-block-icon"></span><a class="event" event-action="slide" event-label="feature-engineering" href="feature-engineering/feature-engineering.pdf" target="_blank">幻灯片</a></div>
+            <div class="content-block-icons-notebook"><span class="mdi mdi-note-text content-block-icon"></span><a class="event" event-action="notebook" event-label="feature-engineering" href="feature-engineering/notebooks/feature-engineering.ipynb">Notebook</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="content-block-slide">
+          <img src="docs/images/slides/model-evaluation-and-hyperparameter-optimization.png" />
+          <div class="content-block-slide-contents">
+            <ol>
+              <li>模型性能评估</li>
+              <ul>
+                <li>回归问题</li>
+                <li>分类问题</li>
+                <li>聚类问题</li>
+              </ul>
+              <li>模型生成和选择</li>
+              <ul>
+                <li>过拟合问题</li>
+                <li>评估方法</li>
+                <li>偏差和方差</li>
+              </ul>
+              <li>超参数优化</li>
+              <ul>
+                <li>搜索算法</li>
+                <li>进化和群体算法</li>
+                <li>贝叶斯优化</li>
+              </ul>
+            </ol>
+          </div>
+        </div>
+        <div class="content-block-introduction">
+          <div class="content-block-title">
+            <div class="content-block-title-zh">8. 模型评估 & 超参数优化</div>
+            <div class="content-block-title-en">8. Model Evaluation & Hyperparameter Optimization</div>
+          </div>
+          <div class="content-block-icons">
+            <div class="content-block-icons-slide"><span class="mdi mdi-projector-screen content-block-icon"></span><a class="event" event-action="slide" event-label="model-evaluation-and-hyperparameter-optimization" href="model-evaluation-and-hyperparameter-optimization/model-evaluation-and-hyperparameter-optimization.pdf" target="_blank">幻灯片</a></div>
+            <div class="content-block-icons-notebook"><span class="mdi mdi-note-text content-block-icon"></span><a class="event" event-action="notebook" event-label="model-evaluation-and-hyperparameter-optimization" href="model-evaluation-and-hyperparameter-optimization/notebooks/model-evaluation-and-hyperparameter-optimization.ipynb">Notebook</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="content-block-slide">
+          <img src="docs/images/slides/classification-algorithms-part-1.png" />
+          <div class="content-block-slide-contents">
+            <ol>
+              <li>逻辑回归</li>
+              <li>决策树</li>
+            </ol>
+          </div>
+        </div>
+        <div class="content-block-introduction">
+          <div class="content-block-title">
+            <div class="content-block-title-zh">9. 分类算法 (上)</div>
+            <div class="content-block-title-en">9. Classification Algorithms Part 1</div>
+          </div>
+          <div class="content-block-icons">
+            <div class="content-block-icons-slide"><span class="mdi mdi-projector-screen content-block-icon"></span><a class="event" event-action="slide" event-label="classification-algorithms-part-1" href="classification-algorithms-part-1/classification-algorithms-part-1.pdf" target="_blank">幻灯片</a></div>
+            <div class="content-block-icons-notebook"><span class="mdi mdi-note-text content-block-icon"></span><a class="event" event-action="notebook" event-label="classification-algorithms-part-1" href="classification-algorithms-part-1/notebooks/classification-algorithms-part-1.ipynb">Notebook</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="content-block-slide">
+          <img src="docs/images/slides/classification-algorithms-part-2.png" />
+          <div class="content-block-slide-contents">
+            <ol>
+              <li>Bagging</li>
+              <li>Boosting</li>
+              <li>Stacking</li>
+            </ol>
+          </div>
+        </div>
+        <div class="content-block-introduction">
+          <div class="content-block-title">
+            <div class="content-block-title-zh">10. 分类算法 (下)</div>
+            <div class="content-block-title-en">10. Classification Algorithms Part 2</div>
+          </div>
+          <div class="content-block-icons">
+            <div class="content-block-icons-slide"><span class="mdi mdi-projector-screen content-block-icon"></span><a class="event" event-action="slide" event-label="classification-algorithms-part-2" href="classification-algorithms-part-2/classification-algorithms-part-2.pdf" target="_blank">幻灯片</a></div>
+            <div class="content-block-icons-notebook"><span class="mdi mdi-note-text content-block-icon"></span><a class="event" event-action="notebook" event-label="classification-algorithms-part-2" href="classification-algorithms-part-2/notebooks/classification-algorithms-part-2.ipynb">Notebook</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="content-block-slide">
+          <img src="docs/images/slides/time-series-algorithms.png" />
+          <div class="content-block-slide-contents">
+            <ol>
+              <li>时间序列</li>
+              <li>ARIMA 模型</li>
+              <li>季节性分析</li>
+              <li>Prophet</li>
+            </ol>
+          </div>
+        </div>
+        <div class="content-block-introduction">
+          <div class="content-block-title">
+            <div class="content-block-title-zh">11. 时间序列算法</div>
+            <div class="content-block-title-en">11. Time Series Algorithms</div>
+          </div>
+          <div class="content-block-icons">
+            <div class="content-block-icons-slide"><span class="mdi mdi-projector-screen content-block-icon"></span><a class="event" event-action="slide" event-label="time-series-algorithms" href="time-series-algorithms/time-series-algorithms.pdf" target="_blank">幻灯片</a></div>
+            <div class="content-block-icons-notebook"><span class="mdi mdi-note-text content-block-icon"></span><a class="event" event-action="notebook" event-label="time-series-algorithms" href="time-series-algorithms/notebooks/time-series-algorithms.ipynb">Notebook</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="content-block-slide">
+          <img src="docs/images/slides/clustering-algorithms.png" />
+          <div class="content-block-slide-contents">
+            <ol>
+              <li>K-means</li>
+              <li>层次聚类</li>
+              <li>基于密度的聚类</li>
+            </ol>
+          </div>
+        </div>
+        <div class="content-block-introduction">
+          <div class="content-block-title">
+            <div class="content-block-title-zh">12. 聚类算法</div>
+            <div class="content-block-title-en">12. Clustering Algorithms</div>
+          </div>
+          <div class="content-block-icons">
+            <div class="content-block-icons-slide"><span class="mdi mdi-projector-screen content-block-icon"></span><a class="event" event-action="slide" event-label="clustering-algorithms" href="clustering-algorithms/clustering-algorithms.pdf" target="_blank">幻灯片</a></div>
+            <div class="content-block-icons-notebook"><span class="mdi mdi-note-text content-block-icon"></span><a class="event" event-action="notebook" event-label="clustering-algorithms" href="clustering-algorithms/notebooks/clustering-algorithms.ipynb">Notebook</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="content-block-slide">
+          <img src="docs/images/slides/reproducible-research.png" />
+          <div class="content-block-slide-contents">
+            <ol>
+              <li>可重复性研究</li>
+              <li>Markdown</li>
+              <li>reStructuredText & Sphinx</li>
+              <li>Jupyter</li>
+              <li>版本控制</li>
+              <li>其他工具</li>
+            </ol>
+          </div>
+        </div>
+        <div class="content-block-introduction">
+          <div class="content-block-title">
+            <div class="content-block-title-zh">13. 可重复性研究</div>
+            <div class="content-block-title-en">13. Reproducible Research</div>
+          </div>
+          <div class="content-block-icons">
+            <div class="content-block-icons-slide"><span class="mdi mdi-projector-screen content-block-icon"></span><a class="event" event-action="slide" event-label="reproducible-research" href="reproducible-research/reproducible-research.pdf" target="_blank">幻灯片</a></div>
+            <div class="content-block-icons-notebook"><span class="mdi mdi-note-text content-block-icon"></span><a class="event" event-action="notebook" event-label="reproducible-research" href="reproducible-research/notebooks/reproducible-research.ipynb">Notebook</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="content-block-slide">
+          <img src="docs/images/slides/deep-learning-algorithms.png" />
+          <div class="content-block-slide-contents">
+            <ol>
+              <li>人工神经网络</li>
+              <li>卷积神经网络</li>
+              <li>循环神经网络</li>
+              <li>深度学习框架</li>
+            </ol>
+          </div>
+        </div>
+        <div class="content-block-introduction">
+          <div class="content-block-title">
+            <div class="content-block-title-zh">14. 深度学习算法</div>
+            <div class="content-block-title-en">14. Deep Learning Algorithms</div>
+          </div>
+          <div class="content-block-icons">
+            <div class="content-block-icons-slide"><span class="mdi mdi-projector-screen content-block-icon"></span><a class="event" event-action="slide" event-label="deep-learning-algorithms" href="deep-learning-algorithms/deep-learning-algorithms.pdf" target="_blank">幻灯片</a></div>
+            <div class="content-block-icons-notebook"><span class="mdi mdi-note-text content-block-icon"></span><a class="event" event-action="notebook" event-label="deep-learning-algorithms" href="#"><del>Notebook</del></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="footer">
+      © <a href="/">Leo Van</a> 2019 - 2020 | <a href="https://github.com/leovan" target="_blank">Github</a> | <a href="https://orcid.org/0000-0002-9556-7821" target="_blank">ORCID</a> | I am Mr. Black
+    </div>
+  </body>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48667916-4"></script>
+  <script>
+    if (window.location.hostname != '127.0.0.1' && window.location.hostname != 'localhost') {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-48667916-4');
+    };
+
+    $(document).ready(function() {
+      $('.event').on('click', function() {
+        gtag('event', $(this).attr('event-action'), {
+          'event_category': 'homepage_click',
+          'event_label': $(this).attr('event-label')
+        });
+      });
+    });
+  </script>
+</html>
