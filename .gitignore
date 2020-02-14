@@ -6,6 +6,9 @@
 # vscode
 .vscode
 
+# Python
+.ipynb_checkpoints
+
 # system
 .DS_Store
 *.log
