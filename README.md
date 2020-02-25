@@ -25,15 +25,15 @@
 
 1. 操作系统: Windows 10+ (x64)，macOS 10.12+，Ubuntu 16.04+
 2. Python: 最新版本 Anaconda Python 3 ([下载地址](https://www.anaconda.com/download/))
-3. PyCharm Community Version: 最新版本 ([下载地址](https://www.jetbrains.com/pycharm/)，Python IDE，可选)
+3. PyCharm: 最新版本 ([下载地址](https://www.jetbrains.com/pycharm/)，Python IDE)
 4. Spyder: 最新版本 ([下载地址](https://www.spyder-ide.org/)，Python IDE，Anaconda 已包含)
 5. Visual Studio Code: 最新版本 ([下载地址](https://code.visualstudio.com/)，用于代码浏览和编辑)
 6. Typora: 最新版本 ([下载地址](http://typora.io/)，用于 Markdown 浏览)
 7. nteract: 最新版本 ([下载地址](https://nteract.io/)，Jupyter Notebook 桌面客户端)
 
-## 参考书籍
+## 参考书籍 - Reference
 
-1. 《Python编程 从入门到实践》(Python Crash Course, A Hand-On, Project-Based Introduction to Programming)，Eric Matthes 著，袁国忠 译
+1. 《Python 编程从入门到实践》(Python Crash Course, A Hand-On, Project-Based Introduction to Programming)，Eric Matthes 著，袁国忠 译
 2. 《流畅的 Python》(Fluent Python)，Luciano Ramalho 著，安道、吴珂 译
 3. 《利用 Python 进行数据分析》(Python for Data Analysis: Data Wrangling with Pandas, Numpy and IPython)，Wes McKinney 著，徐敬一 译
 4. 《机器学习实践》(Machine Learning in Action)，Petter Harrington 著，李锐、李鹏、曲亚东、王斌 译
@@ -126,12 +126,12 @@
    - 进化和群体算法
    - 贝叶斯优化
 
-## 分类算法 (上) - Classification Algorithms Part 1
+## 分类算法 (上) - Classification Algorithms - Part 1
 
 1. 逻辑回归
 2. 决策树
 
-## 分类算法 (下) - Classification Algorithms Part 2
+## 分类算法 (下) - Classification Algorithms - Part 2
 
 1. Bagging
 2. Boosting
