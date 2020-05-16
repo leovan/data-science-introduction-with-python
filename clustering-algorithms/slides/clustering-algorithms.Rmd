@@ -174,7 +174,7 @@ sklearn.cluster.KMeans(
 | 参数         | 描述                                           |
 | ------------ | ---------------------------------------------- |
 | `n_clusters` | 聚类个数                                       |
-| `init`       | 初始化方法，`'k-means++', 'random'` 或制定位置 |
+| `init`       | 初始化方法，`'k-means++', 'random'` 或指定位置 |
 | `n_init`     | 利用 centroid seeds 运行算法的次数             |
 | `max_iter`   | 最大迭代次数                                   |
 | `algorithm`  | K-means 使用的算法，`'auto', 'full', 'elkan'`  |
