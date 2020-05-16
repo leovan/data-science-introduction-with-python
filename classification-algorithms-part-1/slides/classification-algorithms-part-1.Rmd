@@ -264,7 +264,7 @@ $$P\left(X = x_i, Y = y_i\right) = p_{ij}, \quad i = 1,2,...,n; \quad j = 1,2,..
 
 则条件熵 $H\left(Y | X\right)$ 表示在已知 $X$ 的条件下 $Y$ 的不确定性，定义如下：
 
-$$H\left(Y | X\right) = \sum_{i=i}^{n} p_i H \left(Y | X = x_i\right)$$
+$$H\left(Y | X\right) = \sum_{i=1}^{n} p_i H \left(Y | X = x_i\right)$$
 
 信息增益（information gain）表示在已知特征 $X$ 对于类 $Y$ 的不确定性的减少程度。则特征 $A$ 对于数据集 $D$ 的信息增益 $G\left(D, A\right)$，可以用数据集的熵 $H\left(D\right)$ 和已知特征 $A$ 的前提下的经验熵 $H\left(D, A\right)$ 之差来表示：
 
