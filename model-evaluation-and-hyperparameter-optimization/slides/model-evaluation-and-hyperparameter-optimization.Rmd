@@ -296,7 +296,7 @@ ROC（Receiver Operation Characteristic，接收者操作特征）曲线，首�
 $$
 \begin{align}
 \text{TPR} &= \dfrac{\text{TP}}{\text{TP} + \text{FN}} \\
-\text{FPP} &= \dfrac{\text{FP}}{\text{TN} + \text{FP}}
+\text{FPR} &= \dfrac{\text{FP}}{\text{TN} + \text{FP}}
 \end{align}
 $$
 ]
