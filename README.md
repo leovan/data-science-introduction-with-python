@@ -1,41 +1,40 @@
 # Data Science Introduction with Python <img src="docs/images/web/data-science-introduction-with-python.png" align="right" alt="logo" height = "100" style = "border: none; float: right;">
 
-[![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](LICENSE)
+![Release](https://img.shields.io/github/release/leovan/data-science-introduction-with-python.svg)
+![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)
 ![Issues](https://img.shields.io/github/issues/leovan/data-science-introduction-with-python.svg)
-[![Netlify Status](https://img.shields.io/netlify/c0fceb65-8d49-4a23-9bec-8942a16e3648)](https://app.netlify.com/sites/ds-python/deploys)
+![Netlify Status](https://img.shields.io/netlify/c0fceb65-8d49-4a23-9bec-8942a16e3648)
 
 ---
 
 ## 简介 - Introduction
 
 1. 本项目是一套以 Python 为分析语言的数据科学入门教程。
-2. 网站: https://ds-python.leovan.tech
-3. Git 仓库目录结构:
-   - 一级目录为一个专题
-   - 二级目录:
-     - data: 数据文件目录，包含本节所需数据文件
-     - notebooks: 练习笔记目录，包含本节使用的笔记
-     - scripts: 代码脚本目录，包含本节所需的代码脚本
-     - slides: 幻灯片目录，包含本节幻灯片的源代码
-   - 幻灯片: 一级目录下的 PDF 文件即为本节课程的幻灯片
-   - docs 目录: 包含配置手册等其他资料
+2. 托管网站：https://ds-python.leovan.tech
+3. 仓库目录结构：
+   - base 目录：幻灯片相关配置文件
+   - docs 目录：其他资料
+   - 其他一级目录：
+   - 二级目录：
+     - *.pdf：本节课程幻灯片
+     - data：本节课程所需数据文件
+     - slide：本节课程幻灯片源代码
 4. 本项目遵守 [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) 协议。
 
 ## 准备 - Preparation
 
-1. 操作系统: Windows 10+ (x64)，macOS 10.12+，Ubuntu 16.04+
-2. Python: 最新版本 Anaconda Python 3 ([下载地址](https://www.anaconda.com/download/))
-3. PyCharm: 最新版本 ([下载地址](https://www.jetbrains.com/pycharm/)，Python IDE)
-4. Spyder: 最新版本 ([下载地址](https://www.spyder-ide.org/)，Python IDE，Anaconda 已包含)
-5. Visual Studio Code: 最新版本 ([下载地址](https://code.visualstudio.com/)，用于代码浏览和编辑)
-6. Typora: 最新版本 ([下载地址](http://typora.io/)，用于 Markdown 浏览)
-7. nteract: 最新版本 ([下载地址](https://nteract.io/)，Jupyter Notebook 桌面客户端)
+1. 操作系统：Windows 10+ (x64)，macOS 10.12+，Ubuntu 16.04+
+2. Python：最新版本 Anaconda Python 3 ([下载地址](https://www.anaconda.com/download/))
+3. PyCharm：最新版本 ([下载地址](https://www.jetbrains.com/pycharm/)，Python IDE)
+4. Spyder：最新版本 ([下载地址](https://www.spyder-ide.org/)，Python IDE，Anaconda 已包含)
+5. Visual Studio Code：最新版本 ([下载地址](https://code.visualstudio.com/)，用于代码浏览和编辑)
+6. Typora：最新版本 ([下载地址](http://typora.io/)，用于 Markdown 浏览)
 
 ## 参考书籍 - Reference
 
 1. 《Python 编程从入门到实践》(Python Crash Course, A Hand-On, Project-Based Introduction to Programming)，Eric Matthes 著，袁国忠 译
 2. 《流畅的 Python》(Fluent Python)，Luciano Ramalho 著，安道、吴珂 译
-3. 《利用 Python 进行数据分析》(Python for Data Analysis: Data Wrangling with Pandas, Numpy and IPython)，Wes McKinney 著，徐敬一 译
+3. 《利用 Python 进行数据分析》(Python for Data Analysis：Data Wrangling with Pandas, Numpy and IPython)，Wes McKinney 著，徐敬一 译
 4. 《机器学习实践》(Machine Learning in Action)，Petter Harrington 著，李锐、李鹏、曲亚东、王斌 译
 5. 《Python 机器学习》(Python Machine Learning)，Sebastian Raschka & Vahid Mirjalili 著，陈斌 译
 6. 《统计学习方法》李航 著

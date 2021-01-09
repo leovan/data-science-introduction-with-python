@@ -14,13 +14,15 @@
 *.log
 *.dump
 
-# slides source
-*_files
-/*/slides/*
-!/*/slides/*.Rmd
-!/*/slides/images/
+# base
+base/fonts
+
+# slide source
+/*/slide/*_cache
+/*/slide/*_files
+/*/slide/libs
+/*/slide/generated
+/*/slide/*.html
 
 # others
-*.tex
-*.aux
-*.xdv
+*.h5
