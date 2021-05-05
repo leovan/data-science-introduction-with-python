@@ -3,7 +3,6 @@
 ![Release](https://img.shields.io/github/release/leovan/data-science-introduction-with-python.svg)
 ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)
 ![Issues](https://img.shields.io/github/issues/leovan/data-science-introduction-with-python.svg)
-![Netlify Status](https://img.shields.io/netlify/c0fceb65-8d49-4a23-9bec-8942a16e3648)
 
 ---
 
