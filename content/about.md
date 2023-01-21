@@ -1,14 +1,18 @@
-# Python 数据科学导论 <img src="static/images/data-science-introduction-with-python.png" align="right" alt="logo" height="100" style="border: none; float: right;">
-
-![Release](https://img.shields.io/github/release/leovan/data-science-introduction-with-python.svg)
-![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)
-![Issues](https://img.shields.io/github/issues/leovan/data-science-introduction-with-python.svg)
-
+---
+title: 关于
+author: 范叶亮
+date: 2023-01-21
+slug: about
+disable_mathjax: true
+disable_prismjs: true
+disable_adsense: true
 ---
 
-## 简介
+## 简介 <img src="/images/data-science-introduction-with-python.png" align="right" alt="logo" height="128" style="border: none; float: right;">
 
-本项目是以 Python 为基础的数据科学入门教程，在线版本托管在 https://ds-python.leovan.tech 上。
+本项目是以 Python 为基础的数据科学入门教程。
+
+在线版本托管在 https://ds-python.leovan.tech 上，源代码存储在 [Github](https://github.com/leovan/data-science-introduction-with-python) 中。
 
 ## 参考
 
