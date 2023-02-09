@@ -67,6 +67,7 @@
   height: 32px;
   padding: 4px 4px 4px 4px;
   transition: transform 0.1s;
+  cursor: pointer;
 }
 
 .pdf-viewer-button:active {
