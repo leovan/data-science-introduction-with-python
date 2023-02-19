@@ -5,7 +5,7 @@ author: "范叶亮 | Leo Van"
 date: ""
 output:
   xaringan::moon_reader:
-    mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js
+    mathjax: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js
     css:
       - https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css
       - css/style.css
@@ -27,8 +27,8 @@ options(htmltools.dir.version = FALSE)
 <div class="content-page">
   <p class="content-page-title">目录</p>
   <li class="content-page-list">NumPy 简介</li>
-  <li class="content-page-list">NumPy 多维数组对象</li>
-  <li class="content-page-list">NumPy 面向数据编程</li>
+  <li class="content-page-list">多维数组对象</li>
+  <li class="content-page-list">面向数组编程</li>
 </div>
 
 ---
@@ -39,7 +39,7 @@ class: section, center, middle
 ---
 class:
 
-# NumPy
+# NumPy 简介
 
 NumPy 是使用 Python 进行科学计算的基础软件包。它包括：
 
@@ -59,7 +59,7 @@ import numpy as np
 ---
 class:
 
-# NumPy
+# NumPy 简介
 
 NumPy 数组和原生 Python Array（数组）之间有几个重要的区别：
 
@@ -71,7 +71,7 @@ NumPy 数组和原生 Python Array（数组）之间有几个重要的区别：
 ---
 class:
 
-# NumPy
+# NumPy 简介
 
 NumPy 的高效得益于**向量化**和**广播**：
 
@@ -87,12 +87,12 @@ NumPy 的高效得益于**向量化**和**广播**：
 ---
 class: section, center, middle
 
-# NumPy 多维数组对象
+# 多维数组对象
 
 ---
 class:
 
-# NumPy 数据类型
+# 数据类型
 
 NumPy 支持比 Python 更多种类的数据类型，NumPy 的数值类型实际上是 `dtype` 对象的实例，并对应唯一的字符。
 
@@ -111,7 +111,7 @@ NumPy 支持比 Python 更多种类的数据类型，NumPy 的数值类型实际
 ---
 class:
 
-# NumPy 数据类型
+# 数据类型
 
 .center[(接上表)]
 
@@ -127,7 +127,7 @@ class:
 ---
 class:
 
-# NumPy 创建数组
+# 创建数组
 
 .pull-left[
 生成数组最简单的方式就是使用 `array` 函数。`array` 函数接收任意的序列类型对象（也包括其他的数组），生成一个新的包含传递数据的 NumPy 数组。
@@ -182,7 +182,7 @@ a1.dtype
 ---
 class:
 
-# NumPy 创建数组
+# 创建数组
 
 NumPy 还可以通过其他函数生成数组，如下表所示：
 
@@ -200,7 +200,7 @@ NumPy 还可以通过其他函数生成数组，如下表所示：
 ---
 class:
 
-# NumPy 数组算术
+# 数组算术
 
 .pull-left[
 NumPy 允许批量运算而无需任何 `for` 循环，该特性称之为**向量化**，任何两个等尺寸数组之间的算数操作搜是逐元素的：
@@ -226,11 +226,11 @@ arr ** 0.5
 ---
 class:
 
-# NumPy 广播
+# 广播
 
 广播描述了算法如何在不同形状的数组之间进行运算，它功能强大，但也可能会导致混淆。
 
-.blockcode-note[
+.blockquote-note[
 **广播的原则**：如果对于每个结尾维度（即从尾部开始的），轴长度都匹配或者长度都是 1， 两个数组就是可以兼容广播的。之后，广播会在丢失的或长度为 1 的轴上进行。
 ]
 
@@ -251,7 +251,7 @@ arr - arr.mean(0)
 ---
 class:
 
-# NumPy 广播
+# 广播
 
 假如我们希望减去每一行的平均值，由于 `arr.mean(0)` 的长度为 3，因此他与轴 0 上的广播兼容，因为 `arr` 中的结尾维度为 3，因此匹配。为了从轴 1 减去均值（即从每行减去行平均值），较小的数组的形状必须是 `(4, 1)`。
 
@@ -269,7 +269,7 @@ arr - arr.mean(1).reshape((4, 1))
 ---
 class:
 
-# NumPy 广播
+# 广播
 
 下图为对沿着轴将一个二维数组加到三维数组的示意：
 
@@ -282,7 +282,7 @@ knitr::include_graphics('images/broadcasting-over-axis-0-of-a-3d-array.png')
 ---
 class:
 
-# NumPy 广播
+# 广播
 
 根据广播规则，“广播维度”在较小的数组中须为 1，在“行减均值”的例子中，意味着形状需要是 `(4, 1)` 而不是 `(4, )`。使用 `reshape` 是一种选择，但插入一个轴需要构造一个表示新形状的元组。在三维情况下，任何一个维度上进行广播只是将数据塑造为形状兼容的问题，下图显示了三维数组的每个轴上广播所需的形状：
 
@@ -295,7 +295,7 @@ knitr::include_graphics('images/compatible-2d-array-shapes-for-broadcasting-over
 ---
 class:
 
-# NumPy 索引
+# 索引
 
 .pull-left[
 NumPy 的 `ndarray` 数据可以通过索引和切片进行访问和修改，与 Python 的内建列表类似。
@@ -326,7 +326,7 @@ arr
 ---
 class:
 
-# NumPy 索引
+# 索引
 
 .pull-left[
 对于一个二维数组，每个索引值对应的元素不再是一个值，而是一个一维数组。
@@ -357,7 +357,7 @@ knitr::include_graphics('images/indexing-elements-in-a-numpy-array.png')
 ---
 class:
 
-# NumPy 索引
+# 索引
 
 .pull-left[
 在多维数组中，可以省略后续索引值，返回的对象是降低一个维度的数组。
@@ -386,7 +386,7 @@ arr[1, 0]
 ---
 class:
 
-# NumPy 切片
+# 切片
 
 .pull-left[
 与 Python 列表的一维对象类似，数组可以通过类似的语法进行切片：
@@ -416,7 +416,7 @@ arr[:2, 1:]
 ---
 class:
 
-# NumPy 切片
+# 切片
 
 .pull-left[
 需要注意的是，单独的一个冒号表示选择整个轴上的数组，因此可以按照如下方式在更高维度上进行切片：
@@ -442,7 +442,7 @@ knitr::include_graphics('images/two-dimensional-array-slicing.png')
 ---
 class:
 
-# NumPy 布尔索引
+# 布尔索引
 
 .pull-left[
 考虑如下例子，每个人名和 `data` 数组中的一行对应：
@@ -475,7 +475,7 @@ data[names == 'Leo']
 ---
 class:
 
-# NumPy 布尔索引
+# 布尔索引
 
 .pull-left[
 ```{python}
@@ -494,7 +494,7 @@ data[names == 'Leo', 1:]
 ---
 class:
 
-# NumPy 数组转置和换轴
+# 数组转置和换轴
 
 .pull-left[
 转置是一种特殊的数据重组形式，可以返回数据的视图而不需要复制任何内容。数组拥有 `transpose` 方法，也有特殊的 `T` 属性：
@@ -521,7 +521,7 @@ arr.transpose((1, 0, 2))
 ---
 class:
 
-# NumPy 数组转置和换轴
+# 数组转置和换轴
 
 使用 `.T` 进行转置是换轴的一个特殊案例。`ndarray` 有一个 `swapaxes` 方法，该方法接收一堆轴编号作为参数，并对轴进行调整用于重组数据：
 
@@ -539,7 +539,7 @@ arr.swapaxes(1, 2)
 ---
 class:
 
-# NumPy 通用函数
+# 通用函数
 
 通用函数，也可以称为 `ufunc`，是一种在 `ndarray` 数据中进行逐元素操作的函数。某些简单函数接收一个或多个标量数值，并产生一个或多个标量结果，而通用函数就是对这些简单函数的向量化封装。
 
@@ -554,7 +554,7 @@ np.sqrt(arr)
 ---
 class:
 
-# NumPy 一元通用函数
+# 一元通用函数
 
 | 函数名                    | 描述                                                         |
 | ------------------------- | ------------------------------------------------------------ |
@@ -572,7 +572,7 @@ class:
 ---
 class:
 
-# NumPy 一元通用函数
+# 一元通用函数
 
 .center[(接上表)]
 
@@ -589,7 +589,7 @@ class:
 ---
 class:
 
-# NumPy 二元通用函数
+# 二元通用函数
 
 | 函数名                 | 描述                                         |
 | ---------------------- | -------------------------------------------- |
@@ -606,7 +606,7 @@ class:
 ---
 class:
 
-# NumPy 二元通用函数
+# 二元通用函数
 
 .center[(接上表)]
 
@@ -620,12 +620,12 @@ class:
 ---
 class: section, center, middle
 
-# NumPy 面向数组编程
+# 面向数组编程
 
 ---
 class:
 
-# NumPy 面向数组编程
+# 面向数组编程
 
 使用 NumPy 数组可以使你利用简单的数组表达式完成多种数组操作任务，而无须写大量循环。这种利用数组表达式来替代显示循环的方法，成为向量化。通常，向量化的数组操作回避纯 Python 的等价实现在速度上快一到两个数量级（甚至更多），这对所有种类的数值计算产生了很大的影响。
 
@@ -657,7 +657,7 @@ np.where(cond, xarr, yarr)
 ---
 class:
 
-# NumPy 数学和统计方法
+# 数学和统计方法
 
 许多关于计算整个数组统计值或关于轴向数据的数学函数，可以作为数组类型的方法被调用。你可以使用聚合函数，比如 `sum, mean` 和 `std`，既可以使用数组实例的方法，也可以使用顶层的 NumPy 函数。
 
@@ -680,7 +680,7 @@ arr.sum(axis=0)
 ---
 class:
 
-# NumPy 统计方法
+# 统计方法
 
 基础数组统计方法如下表所示：
 
@@ -697,7 +697,7 @@ class:
 ---
 class:
 
-# NumPy 排序
+# 排序
 
 .pull-left[
 和 Python 内建列表类型相似，NumPy 数组可以使用 `sort` 方法按位置排序：
@@ -726,7 +726,7 @@ arr
 ---
 class:
 
-# NumPy 集合操作
+# 集合操作
 
 NumPy 包含一些针对一维 `ndarray` 的基础集合操作，常用集合操作如下表所示：
 
@@ -742,7 +742,7 @@ NumPy 包含一些针对一维 `ndarray` 的基础集合操作，常用集合操
 ---
 class:
 
-# NumPy 线性代数
+# 线性代数
 
 线性代数，例如矩阵乘法、分解、行列式等矩阵运算是所有数组类库的重要组成部分，常用线性代数函数如下表所示：
 
@@ -759,7 +759,7 @@ class:
 ---
 class:
 
-# NumPy 线性代数
+# 线性代数
 
 .center[(接上表)]
 
@@ -775,7 +775,7 @@ class:
 ---
 class:
 
-# NumPy 伪随机数生成
+# 伪随机数生成
 
 `np.random` 模块填补了 Python 内建的 `random` 的不足，可以高效的生成多种概率分布下的数组，部分函数如下：
 

@@ -5,7 +5,7 @@ author: "范叶亮 | Leo Van"
 date: ""
 output:
   xaringan::moon_reader:
-    mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js
+    mathjax: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js
     css:
       - https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css
       - css/style.css
@@ -820,7 +820,7 @@ seq
 ]
 
 .pull-right[
-在切片中，其实位置 `start` 是包含的，而结束位置 `stop` 是不包含的。
+在切片中，起始位置 `start` 是包含的，而结束位置 `stop` 是不包含的。
 
 `start` 和 `stop` 是可以省略的，如果省略则会默认传入序例的起始位置或结束位置：
 
@@ -1166,11 +1166,11 @@ class:
 
 # Python 编码风格规范
 
-.blockcode-note[
+.blockquote-note[
 不要在行尾加分号, 也不要用分号将两条命令放在同一行。
 ]
 
-.blockcode-note[
+.blockquote-note[
 每行不超过 80 个字符。
 ]
 
@@ -1202,7 +1202,7 @@ class:
 # Python 编码风格规范
 
 .pull-left[
-.blockcode-note[
+.blockquote-note[
 宁缺毋滥的使用括号。
 ]
 
@@ -1235,7 +1235,7 @@ return (foo)
 ```
 ]
 
-.blockcode-note[
+.blockquote-note[
 顶级定义之间空两行，方法定义之间空一行。
 ]
 
@@ -1248,7 +1248,7 @@ class:
 # Python 编码风格规范
 
 .pull-left[
-.blockcode-note[
+.blockquote-note[
 用 4 个空格来缩进代码。
 ]
 
@@ -1310,7 +1310,7 @@ class:
 # Python 编码风格规范
 
 .pull-left[
-.blockcode-note[
+.blockquote-note[
 按照标准的排版规范来使用标点两边的空格。
 ]
 
@@ -1443,7 +1443,7 @@ dictionary = {
 ```
 ]]
 
-.blockcode-note[
+.blockquote-note[
 大部分 `.py` 文件不必以 `#!` 作为文件的开始。根据 PEP-394 ，程序的 `main` 文件应该以 `#!/usr/bin/python2` 或者 `#!/usr/bin/python3 ` 开始。
 ]
 
@@ -1454,7 +1454,7 @@ class:
 
 # Python 编码风格规范
 
-.blockcode-note[
+.blockquote-note[
 确保对模块，函数，方法和行内注释使用正确的风格。
 ]
 
@@ -1564,8 +1564,8 @@ class:
 
 # Python 编码风格规范
 
-.blockcode-note[
-即使参数都是字符串，使用 `%` 操作符或者格式化方法格式化字符串。不过也不能一概而论，你需要在 `+` 和 `%` 之间好好判定。
+.blockquote-note[
+即使参数都是字符串，使用 `%` 或者格式化方法格式化字符串。不过也不能一概而论，你需要在 `+` 和 `%` 之间好好判定。
 ]
 
 .pull-left[.code-good[
@@ -1657,7 +1657,7 @@ class:
 
 # Python 编码风格规范
 
-.blockcode-note[
+.blockquote-note[
 为临时代码使用 TODO 注释，它是一种短期解决方案，不算完美，但够好了。
 ]
 
@@ -1675,7 +1675,7 @@ class:
 
 # Python 编码风格规范
 
-.blockcode-note[
+.blockquote-note[
 每个导入应该独占一行。
 ]
 
@@ -1709,7 +1709,7 @@ class:
 
 # Python 编码风格规范
 
-.blockcode-note[
+.blockquote-note[
 通常每个语句应该独占一行。
 ]
 
@@ -1740,7 +1740,7 @@ class:
 
 # Python 编码风格规范
 
-.blockcode-note[
+.blockquote-note[
 在 Python 中，对于琐碎又不太重要的访问函数，你应该直接使用公有变量来取代它们，这样可以避免额外的函数调用开销。当添加更多功能时，你可以用属性（property）来保持语法的一致性。
 ]
 
@@ -1753,7 +1753,7 @@ class:
 
 # Python 编码风格规范
 
-.blockcode-note[
+.blockquote-note[
 `module_name, package_name, ClassName, method_name, ExceptionName, function_name, GLOBAL_VAR_NAME, instance_var_name, function_parameter_name, local_var_name.`
 ]
 
@@ -1775,7 +1775,7 @@ class:
 class:
 
 .center[
-### Python 之父 Guido 推荐的规范
+**Python 之父 Guido 推荐的规范**
 ]
 
 | 类型          | 公共                 | 内部                                                         |
@@ -1797,7 +1797,7 @@ class:
 
 # Python 编码风格规范
 
-.blockcode-note[
+.blockquote-note[
 即使是一个打算被用作脚本的文件，也应该是可导入的。并且简单的导入不应该导致这个脚本的主功能被执行，这是一种副作用，主功能应该放在一个 `main()` 函数中。
 ]
 

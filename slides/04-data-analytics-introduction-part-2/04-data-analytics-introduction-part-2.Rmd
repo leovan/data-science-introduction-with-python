@@ -5,7 +5,7 @@ author: "范叶亮 | Leo Van"
 date: ""
 output:
   xaringan::moon_reader:
-    mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js
+    mathjax: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js
     css:
       - https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css
       - css/style.css
@@ -32,8 +32,8 @@ warnings.filterwarnings('ignore')
 <div class="content-page">
   <p class="content-page-title">目录</p>
   <li class="content-page-list">pandas 简介</li>
-  <li class="content-page-list">pandas 数据载入和存储</li>
-  <li class="content-page-list">pandas 数据规整</li>
+  <li class="content-page-list">数据载入和存储</li>
+  <li class="content-page-list">数据规整</li>
 </div>
 
 ---
@@ -44,7 +44,7 @@ class: section, center, middle
 ---
 class:
 
-# pandas
+# pandas 简介
 
 pandas 所包含的数据结构和数据处理工具的设计使得在 Python 中进行数据清洗和分析非常便捷。尽管 pandas 采用了很多 NumPy 的代码风格，但最大的不同在于 pandas 是用来处理表格型或异质类型数据的，而 NumPy 则相反，它更适合处理同质类型的数据。
 
@@ -308,7 +308,7 @@ df.values
 ---
 class:
 
-# DataFrame 索引对象
+# 索引对象
 
 .pull-left[
 pandas 中的索引对象是用于储存轴标签和其他元数据的（例如：轴名称或标签），在构造 Series 或 DataFrame 时，所使用的任意数组或标签序列都可以在内部转换为索引对象。
@@ -337,7 +337,7 @@ dup_idx
 ---
 class:
 
-# DataFrame 索引对象
+# 索引对象
 
 | 方法           | 描述                                             | 方法         | 描述                                  |
 | -------------- | ------------------------------------------------ | ------------ | ------------------------------------- |
@@ -351,7 +351,7 @@ class:
 ---
 class:
 
-# DataFrame 重建索引
+# 重建索引
 
 .pull-left[
 `reindex` 用于创建一个符合新索引的新对象：
@@ -379,7 +379,7 @@ df.reindex(columns=['Texas', 'Utah', 'California'])
 ---
 class:
 
-# DataFrame 重建索引
+# 重建索引
 
 `reindex` 方法的参数详见下表：
 
@@ -396,7 +396,7 @@ class:
 ---
 class:
 
-# DataFrame 删除条目
+# 删除条目
 
 .pull-left[
 `drop` 方法返回含有指示值或轴向上删除值的新对象：
@@ -424,7 +424,7 @@ df
 ---
 class:
 
-# DataFrame 删除条目
+# 删除条目
 
 .pull-left[
 `drop` 会根据行标签删除值（轴 0）：
@@ -456,7 +456,7 @@ df
 ---
 class:
 
-# DataFrame 索引，选择和过滤
+# 索引，选择和过滤
 
 .pull-left[
 Series 的索引与 NumPy 数组索引类似：
@@ -479,7 +479,7 @@ s[2:4]
 ---
 class:
 
-# DataFrame 索引，选择和过滤
+# 索引，选择和过滤
 
 .pull-left[
 ```{python}
@@ -506,7 +506,7 @@ s
 ---
 class:
 
-# DataFrame 索引，选择和过滤
+# 索引，选择和过滤
 
 .pull-left[
 使用单个值或序列，可以从 DataFrame 中索引出一个或多个列：
@@ -531,7 +531,7 @@ df[['three', 'one']]
 ---
 class:
 
-# DataFrame 索引，选择和过滤
+# 索引，选择和过滤
 
 .pull-left[
 可以根据一个布尔值数组切片或选择数据：
@@ -556,7 +556,7 @@ df
 ---
 class:
 
-# DataFrame 索引，选择和过滤
+# 索引，选择和过滤
 
 .pull-left[
 使用 `loc` 和 `iloc` 可以对 DataFrame 在行上的标签索引，轴标签（`loc`）或整数标签（`iloc`）以 NumPy 风格的语法从 DataFrame 中选出数组的行和列的子集。
@@ -579,7 +579,7 @@ df.iloc[:, :3][df.three > 5]
 ---
 class:
 
-# DataFrame 索引选项
+# 索引选项
 
 | 类型                        | 描述                                                         |
 | --------------------------- | ------------------------------------------------------------ |
@@ -591,12 +591,12 @@ class:
 | `df.iloc[:, where]`         | 根据整数位置选择单列或多列                                   |
 | `df.iloc[where_i, where_j]` | 根据整数位置选择行和列                                       |
 | `df.at[label_i, label_j]`   | 根据行、列标签选择单个标量值                                 |
-| `df.iat[i, j]`                | 根据行、列整数位置选择单个标量值 |
+| `df.iat[i, j]`              | 根据行、列整数位置选择单个标量值                             |
 
 ---
 class:
 
-# DataFrame 算术和数据对齐
+# 算术和数据对齐
 
 .pull-left[
 不同索引对象之间的算术行为是 pandas 提供的一项重要特性，将对象相加时，如果存在某个索引对不同，则返回结果的索引将是索引对的并集。
@@ -634,7 +634,7 @@ s1 + s2
 ---
 class:
 
-# DataFrame 算术和数据对齐
+# 算术和数据对齐
 
 .pull-left[
 在 DataFrame 中，行和列上都会执行对齐：
@@ -674,7 +674,7 @@ df1 + df2
 ---
 class:
 
-# DataFrame 算术和数据对齐
+# 算术和数据对齐
 
 .pull-left[
 在 `df1` 上使用 `add` 方法，我们将 `df2` 和一个 `fill_value` 作为参数传入：
@@ -702,7 +702,7 @@ df1.add(df2, fill_value=0)
 ---
 class:
 
-# DataFrame 算术和数据对齐
+# 算术和数据对齐
 
 .pull-left[
 DataFrame 和 Series 间的算数操作与 NumPy 中不同维度数组间的操作类似。
@@ -740,7 +740,7 @@ df - s
 ---
 class:
 
-# DataFrame 函数应用和映射
+# 函数应用和映射
 
 .pull-left[
 NumPy 的通用函数（逐元素数组方法）对 pandas 对象也有效：
@@ -769,7 +769,7 @@ df.apply(f)
 ---
 class:
 
-# DataFrame 函数应用和映射
+# 函数应用和映射
 
 .pull-left[
 通过传递 `axis='columns'` 给 `apply` 函数，函数会被每行调用一次：
@@ -802,7 +802,7 @@ df['e'].map(f)
 ---
 class:
 
-# DataFrame 排序和排名
+# 排序和排名
 
 .pull-left[
 如需按照行或列索引进行字典型排序，需要使用 `sort_index` 方法，其返回一个新的、排序好的对象：
@@ -844,7 +844,7 @@ df.sort_index(axis=1, ascending=False)
 ---
 class:
 
-# DataFrame 排序和排名
+# 排序和排名
 
 .pull-left[
 如果根据 Series 的值进行排序，可使用 `sort_values` ：
@@ -867,7 +867,7 @@ s.sort_values()
 ---
 class:
 
-# DataFrame 排序和排名
+# 排序和排名
 
 .pull-left[
 对 DataFrame 排序时，可以使用一列或多列作为排序键，通过设置 `sort_values` 的参数 `by` 实现：
@@ -913,7 +913,7 @@ s.rank(method='first')
 ---
 class:
 
-# DataFrame 排序和排名
+# 排序和排名
 
 .pull-left[
 DataFrame 可以对行或列计算排名：
@@ -952,7 +952,7 @@ df.rank(axis='columns')
 ---
 class:
 
-# pandas 描述性统计
+# 描述性统计
 
 .pull-left[
 pandas 装配了一个常用数学、统计学方法的集合，与 NumPy 中类似方法相比，其内建了处理缺失值的功能。
@@ -986,7 +986,7 @@ df.sum(axis='columns')
 ---
 class:
 
-# pandas 描述性统计
+# 描述性统计
 
 .pull-left[
 `idmax` 和 `idmin` 返回的是间接统计信息，除了归约方法外，有的方法是积累型方法：
@@ -1025,7 +1025,7 @@ pd.Series(['a', 'a', 'b', 'c'] * 4).describe()
 ---
 class:
 
-# pandas 描述性统计
+# 描述性统计
 
 | 方法             | 描述                    | 方法             | 描述                    |
 | ---------------- | ----------------------- | ---------------- | ----------------------- |
@@ -1042,12 +1042,12 @@ class:
 ---
 class:
 
-# pandas 相关性和协方差
+# 相关性和协方差
 
 .pull-left[
 ```{python}
-import pandas_datareader as pdr
-d = {ticker: pdr.get_data_yahoo(ticker)
+import yfinance as yf
+d = {ticker: yf.download(ticker, progress=False)
      for ticker in ['AAPL', 'IBM', 'MSFT']}
 p = pd.DataFrame({ticker: data['Adj Close']
                  for ticker, data in d.items()})
@@ -1075,7 +1075,7 @@ p.cov()
 ---
 class:
 
-# pandas 相关性和协方差
+# 相关性和协方差
 
 .pull-left[
 DataFrame 的 `corrwith` 方法可以计算出 DataFrame 行或列与另一个序列或 DataFrame 的相关性。当传入一个 Series 时，会返回一个含有为每列计算相关性值的 Series：
@@ -1098,7 +1098,7 @@ p.corrwith(v)
 ---
 class:
 
-# pandas 唯一值、计数和成员属性
+# 唯一值、计数和成员属性
 
 .pull-left[
 `unique` 函数可以给出 Series 中的唯一值：
@@ -1127,7 +1127,7 @@ pd.value_counts(s.values, sort=False)
 ---
 class:
 
-# pandas 唯一值、计数和成员属性
+# 唯一值、计数和成员属性
 
 .pull-left[
 `isin` 执行向量化的成员属性检查，还可以将数据集以 Series 或 DataFrame 一列的形式过滤为数据集的值子集：
@@ -1158,12 +1158,12 @@ pd.Index(unique_vals).get_indexer(to_match)
 ---
 class: section, center, middle
 
-# pandas 数据载入和存储
+# 数据载入和存储
 
 ---
 class:
 
-# pandas 数据读取
+# 数据读取
 
 将表格型数据读取为 `DataFrame` 对象是 pandas 的重要特性，下表为常用的数据读取函数：
 
@@ -1182,7 +1182,7 @@ class:
 ---
 class:
 
-# pandas 数据读取
+# 数据读取
 
 .center[(接上表)]
 
@@ -1199,7 +1199,7 @@ class:
 ---
 class:
 
-# pandas 数据读取
+# 数据读取
 
 `read_csv / read_table` 的函数参数如下表所示：
 
@@ -1218,7 +1218,7 @@ class:
 ---
 class:
 
-# pandas 数据读取
+# 数据读取
 
 .center[(接上表)]
 
@@ -1235,7 +1235,7 @@ class:
 ---
 class:
 
-# pandas 数据读取
+# 数据读取
 
 .center[(接上表)]
 
@@ -1253,7 +1253,7 @@ class:
 ---
 class:
 
-# pandas 数据写入
+# 数据写入
 
 .pull-left[
 使用 DataFrame 的 `to_csv` 方法，我们可以将数据导出为逗号分隔符文件：
@@ -1403,7 +1403,7 @@ store
 ---
 class: section, center, middle
 
-# pandas 数据规整
+# 数据规整
 
 ---
 class:
@@ -1537,10 +1537,10 @@ class:
 # 按层级进行汇总统计
 
 .pull-left[
-DataFrame 和 Series 中很多统计性和汇总性统计有一个 `level` 选项，通过 `level` 选项可以指定想要在某个特定的轴上进行聚合，按照层级在行上进行聚合：
+DataFrame 和 Series 中很多统计性和汇总性统计可以通过 `groupby` 函数和 `level` 参数可以指定想要在某个特定的轴上进行聚合，按照层级在行上进行聚合：
 
 ```{python}
-df.sum(level='key2')
+df.groupby(level='key2').sum()
 ```
 ]
 
@@ -1548,7 +1548,7 @@ df.sum(level='key2')
 按照层级在列上进行聚合：
 
 ```{python}
-df.sum(level='color', axis=1)
+df.groupby(level='color', axis=1).sum()
 ```
 ]
 
@@ -1581,7 +1581,7 @@ df.set_index(['c', 'd'], drop=False)
 ---
 class:
 
-# 数据库风格的 DataFrame 连接
+# 数据库风格的连接
 
 .pull-left[
 合并或连接操作通过一个或多个键来联合数据集，这些操作是关系型数据库的核心内容。pandas 中的 `merge` 函数主要用于将各种 join 操作应用到数据上：
@@ -1621,7 +1621,7 @@ pd.merge(df1, df2)
 ---
 class:
 
-# 数据库风格的 DataFrame 连接
+# 数据库风格的连接
 
 .pull-left[
 可以显式的的指定连接键：
@@ -1653,7 +1653,7 @@ pd.merge(df3, df4, left_on='lkey', right_on='rkey')
 ---
 class:
 
-# 数据库风格的 DataFrame 连接
+# 数据库风格的连接
 
 .pull-left[
 使用多个键进行合并时，需传入一个列名的列表：
@@ -1681,7 +1681,7 @@ pd.merge(left, right, on='key1', suffixes=('_l', '_r'))
 ---
 class:
 
-# 数据库风格的 DataFrame 连接
+# 数据库风格的连接
 
 `merge` 函数的参数如下表所示：
 
@@ -1699,7 +1699,7 @@ class:
 ---
 class:
 
-# 数据库风格的 DataFrame 连接
+# 数据库风格的连接
 
 .center[(接上表)]
 
@@ -1715,7 +1715,7 @@ class:
 ---
 class:
 
-# 数据库风格的 DataFrame 连接
+# 数据库风格的连接
 
 .pull-left[
 DataFrame 有一个方便的 `join` 实例方法，用于按照索引合并。该方法也可以用于合并多个索引相同或相似但没有重叠列的 DataFrame 对象：
@@ -2085,10 +2085,7 @@ df
 
 .pull-right[
 ```{python}
-pivoted = df.pivot('key', 'var', 'val').reset_index()
-```
-
-```{python, echo=F}
+pivoted = df.pivot(index='key', columns='var', values='val').reset_index()
 pivoted
 ```
 
