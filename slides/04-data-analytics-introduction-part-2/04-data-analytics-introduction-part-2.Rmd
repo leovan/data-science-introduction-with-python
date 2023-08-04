@@ -1647,7 +1647,7 @@ df4 = pd.DataFrame({
 pd.merge(df3, df4, left_on='lkey', right_on='rkey')
 ```
 
-默认情况下 `merge` 做的是内链接 `inner`，其他可选项有左连接 `left`、右连接 `right` 和外连接 `outer`。
+默认情况下 `merge` 做的是内连接 `inner`，其他可选项有左连接 `left`、右连接 `right` 和外连接 `outer`。
 ]
 
 ---
@@ -1749,7 +1749,7 @@ class:
 # 沿轴向连接
 
 .pull-left[
-另一种数据组合操作可互换地成为拼接、绑定或堆叠。NumPy 的 `concatenate` 函数可以在 NumPy 数组上实现该该功能：
+另一种数据组合操作可互换地称为拼接、绑定或堆叠。NumPy 的 `concatenate` 函数可以在 NumPy 数组上实现该该功能：
 
 ```{python}
 arr = np.arange(12).reshape((3, 4))
@@ -1877,7 +1877,7 @@ class:
 | `keys`             | 与要连接的对象关联的值，沿着连接轴形成分层索引。             |
 | `levels`           | 在键值传递时，该参数用于指定多层索引的层级                   |
 | `names`            | 传入 `keys` 或 `levels` 时用于多层索引的层级名称             |
-| `verify_integrity` | 检查链接对象中的新轴是否重复，如果是，则发生异常，默认为 `False` |
+| `verify_integrity` | 检查连接对象中的新轴是否重复，如果是，则发生异常，默认为 `False` |
 | `ignore_index`     | 不沿着连接轴保留索引，而产生一段新的索引                     |
 
 ---

@@ -639,7 +639,7 @@ class:
 $$\operatorname{avg} \left(C\right) = \dfrac{2}{\left|C\right| \left(\left|C\right| - 1\right)} \sum_{1 \leq i \leq j \leq \left|C\right|}{\operatorname{dist} \left(x_i, x_j\right)}$$
 - 簇 $C$ 内样本间最远距离：
 $$\operatorname{diam} \left(C\right) = \max_{1 \leq i \leq j \leq \left|C\right|} \operatorname{dist} \left(x_i, x_j\right)$$
-- 簇 $C_i$ 与 $C_j$ 最近样本件的距离
+- 簇 $C_i$ 与 $C_j$ 最近样本间的距离
 $$d_{\min} \left(C_i, C_j\right) = \min_{x_i \in C_i, x_j \in C_j} \operatorname{dist} \left(x_i, x_j\right)$$
 - 簇 $C_i$ 与 $C_j$ 中心点间的距离
 $$d_{\operatorname{cen}} \left(C_i, C_j\right) = \operatorname{dist} \left(\mu_i, \mu_j\right)$$
