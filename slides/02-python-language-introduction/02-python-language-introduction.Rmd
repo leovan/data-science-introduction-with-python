@@ -1,7 +1,7 @@
 ---
 title: "Python 语言简介"
 subtitle: "Python Language Introduction"
-author: "范叶亮 | Leo Van"
+author: "范叶亮"
 date: ""
 output:
   xaringan::moon_reader:
@@ -393,7 +393,8 @@ True or False
 ```{python}
 a = None
 a is None
-6 is not None
+a = 6
+a is not None
 ```
 ]
 
@@ -1458,11 +1459,11 @@ class:
 确保对模块，函数，方法和行内注释使用正确的风格。
 ]
 
-**文档字符串**
+#### 文档字符串
 
 Python 有一种独一无二的的注释方式：使用文档字符串。文档字符串是包，模块，类或函数里的第一个语句。这些字符串可以通过对象的 `__doc__` 成员被自动提取，并且被 pydoc 所用。我们对文档字符串的惯例是使用三重双引号 `"""` (PEP-257)。一个文档字符串应该这样组织：首先是一行以句号，问号或惊叹号结尾的概述（或者该文档字符串单纯只有一行）。接着是一个空行。接着是文档字符串剩下的部分，它应该与文档字符串的第一行的第一个引号对齐。下面有更多文档字符串的格式化规范。
 
-**模块**
+#### 模块
 
 每个文件应该包含一个许可样板。根据项目使用的许可（例如，Apache 2.0，BSD，LGPL，GPL），选择合适的样板。
 
@@ -1471,7 +1472,7 @@ class:
 
 # Python 编码风格规范
 
-**函数和方法**
+#### 函数和方法
 
 下文所指的函数，包括函数，方法，以及生成器。一个函数必须要有文档字符串，除非它满足以下条件：1. 外部不可见，2. 非常短小，3. 简单明了。
 
@@ -1535,7 +1536,7 @@ class:
 
 # Python 编码风格规范
 
-**块注释和行注释**
+#### 块注释和行注释
 
 最需要写注释的是代码中那些技巧性的部分。 如果你在下次 代码审查 的时候必须解释一下，那么你应该现在就给它写注释。 对于复杂的操作，应该在其操作开始前写上若干行注释。 对于不是一目了然的代码，应在其行尾添加注释。
 
@@ -1757,13 +1758,13 @@ class:
 `module_name, package_name, ClassName, method_name, ExceptionName, function_name, GLOBAL_VAR_NAME, instance_var_name, function_parameter_name, local_var_name.`
 ]
 
-**应该避免的名称**
+#### 应该避免的名称
 
 1. 单字符名称，除了计数器和迭代器。
 2. 包/模块名中的连字符 `-`。
 3. 双下划线开头并结尾的名称（Python 保留，例如 `__init__`）。
 
-**命名约定**
+#### 命名约定
 
 1. 所谓“内部（Internal）”表示仅模块内可用，或者在类内是保护或私有的。
 2. 用单下划线 `_` 开头表示模块变量或函数是 protected 的（使用 `from module import *` 时不会包含）。
@@ -1816,10 +1817,10 @@ if __name__ == '__main__':
 ---
 class: thanks, center, middle
 
-# Thanks
+# 感谢倾听
 
 ![CC BY-NC-SA 4.0](assets/by-nc-sa.svg)
 
-本作品采用 [**CC BY-NC-SA 4.0**](https://creativecommons.org/licenses/by-nc-sa/4.0/) 进行许可
+本作品采用 [**CC BY-NC-SA 4.0**](https://github.com/leovan/data-science-introduction-with-r/blob/main/LICENSE) 授权
 
-Copyright © [**范叶亮 | Leo Van**](https://leovan.me), All Rights Reserved.
+版权所有 © [**范叶亮**](https://leovan.me)
