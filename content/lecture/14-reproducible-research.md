@@ -8,8 +8,8 @@ weight: 14
 cover: /images/lecture/14-reproducible-research.png
 tags:
   - Markdown
-  - reStructuredText
   - Jupyter
+  - quarto
 ---
 
 {{< pdf-viewer url="https://ds-python-cdn.leovan.tech/lecture/14-reproducible-research.pdf" title="13 - 可重复性研究">}}

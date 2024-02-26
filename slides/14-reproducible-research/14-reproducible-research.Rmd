@@ -459,7 +459,7 @@ class:
 
 在 Markdown 中通过 MathJax <sup>[1]</sup> 可以嵌入 LaTeX 公式，例如：
 
-1. `$equation$` 用于行内公式（注意 `$` 符号内侧不能由空白符号）。
+1. `$equation$` 用于行内公式（注意 `$` 符号内侧不能有空白符号）。
 
     例如：`$a = \sum_{i=1}^{n}{i}$` 显示为： $a = \sum_{i=1}^{n}{i}$
 
