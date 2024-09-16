@@ -1,16 +1,32 @@
 baseURL: "https://ds-python.leovan.tech/"
+enableEmoji: true
+hasCJKLanguage: true
+ignoreFiles:
+  - \.Rmarkdown$
+  - \.Rmd$"
+  - \.knit\.md$
+  - \.utf8\.md$
+  - _files$
+  - _cache$
+  - \.txt$
+  - \.csv$
+  - \.tsv$
+  - \.tgz$
+  - \.tar$
+  - \.gz$
+  - \.zip$
+  - \.npz$
 languageCode: "zh-cn"
 title: "Python 数据科学导论 | Data Science Introduction with Python"
-googleAnalytics: "G-0FWLCPRJV2"
-ignoreFiles: [
-  "\\.Rmarkdown$", "\\.Rmd$", "\\.knit\\.md$", "\\.utf8\\.md$",
-  "_files$", "_cache$", "\\.txt$", "\\.csv$", "\\.tsv$",
-  "\\.tgz$", "\\.tar$", "\\.gz$", "\\.zip$", "\\.npz$"]
-hasCJKLanguage: true
-enableEmoji: true
 rssLimit: 100
 
-disableKinds: ["taxonomy", "term"]
+services:
+  googleAnalytics:
+    ID: "G-0FWLCPRJV2"
+
+disableKinds:
+  - "taxonomy"
+  - "term"
 
 permalinks:
   lecture: "/lecture/:slug/"
