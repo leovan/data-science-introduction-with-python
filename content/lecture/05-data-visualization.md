@@ -13,4 +13,4 @@ tags:
   - pyecharts
 ---
 
-{{< pdf-viewer url="https://ds-python-cdn.leovan.tech/lecture/05-data-visualization.pdf" title="05 - 数据可视化">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-python/lecture/05-data-visualization.pdf" title="05 - 数据可视化">}}

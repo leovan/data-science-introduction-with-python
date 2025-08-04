@@ -13,4 +13,4 @@ tags:
   - 超参数优化
 ---
 
-{{< pdf-viewer url="https://ds-python-cdn.leovan.tech/lecture/08-model-evaluation-and-hyperparameter-optimization.pdf" title="08 - 模型评估 & 超参数优化">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-python/lecture/08-model-evaluation-and-hyperparameter-optimization.pdf" title="08 - 模型评估 & 超参数优化">}}

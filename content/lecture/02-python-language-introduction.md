@@ -10,4 +10,4 @@ tags:
   - Python
 ---
 
-{{< pdf-viewer url="https://ds-python-cdn.leovan.tech/lecture/02-python-language-introduction.pdf" title="02 - Python 简介">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-python/lecture/02-python-language-introduction.pdf" title="02 - Python 简介">}}

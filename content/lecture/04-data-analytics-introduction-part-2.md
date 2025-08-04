@@ -13,4 +13,4 @@ tags:
   - 数据规整
 ---
 
-{{< pdf-viewer url="https://ds-python-cdn.leovan.tech/lecture/04-data-analytics-introduction-part-2.pdf" title="04 - 数据分析基础 (下)">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-python/lecture/04-data-analytics-introduction-part-2.pdf" title="04 - 数据分析基础 (下)">}}

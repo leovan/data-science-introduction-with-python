@@ -12,4 +12,4 @@ tags:
   - 面向数据编程
 ---
 
-{{< pdf-viewer url="https://ds-python-cdn.leovan.tech/lecture/03-data-analytics-introduction-part-1.pdf" title="03 - 数据分析基础 (上)">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-python/lecture/03-data-analytics-introduction-part-1.pdf" title="03 - 数据分析基础 (上)">}}
