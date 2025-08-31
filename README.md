@@ -1,4 +1,4 @@
-# Python 数据科学导论 <img src="static/images/data-science-introduction-with-python.png" align="right" alt="logo" height="100" style="border: none; float: right; height: 100px;">
+# Python 数据科学导论 <img src="docs/images/data-science-introduction-with-python.png" align="right" alt="logo" height="100" style="border: none; float: right; height: 100px;">
 
 ![Release](https://img.shields.io/github/release/leovan/data-science-introduction-with-python.svg)
 ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)
